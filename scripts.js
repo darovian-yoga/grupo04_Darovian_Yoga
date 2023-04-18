@@ -15,19 +15,68 @@ window.addEventListener('scroll', () => {
 });
 
 /* ------ BURGER MENU ------ */
-
 const burger = document.querySelector('.burger');
 const nav = document.querySelector('.nav-links');
-const close = document.querySelector('.close');
 
 burger.addEventListener('click', () => {
   nav.classList.toggle('active');
   burger.classList.toggle('active');
-  close.classList.toggle('active');
 });
 
-close.addEventListener('click', () => {
-  nav.classList.remove('active');
-  burger.classList.remove('active');
-  close.classList.remove('active');
+/* ------ CAROUSEL ------ */
+const carouselSlide = document.querySelector('.carousel-slide');
+const carouselDots = document.querySelectorAll('.carousel-dot');
+const carouselPrev = document.querySelector('.carousel-button-prev');
+const carouselNext = document.querySelector('.carousel-button-next');
+
+let counter = 0;
+const size = carouselSlide.children[0].offsetWidth;
+
+function moveCarousel() {
+  carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+}
+
+function updateDots() {
+  carouselDots.forEach(dot => dot.classList.remove('active'));
+  carouselDots[counter].classList.add('active');
+}
+
+function resetTimer() {
+  clearInterval(timer);
+  timer = setInterval(autoCarousel, 5000);
+}
+
+function autoCarousel() {
+  if (counter >= carouselSlide.children.length - 1) return;
+  counter++;
+  moveCarousel();
+  updateDots();
+}
+
+let timer = setInterval(autoCarousel, 5000);
+
+carouselPrev.addEventListener('click', () => {
+  if (counter <= 0) return;
+  counter--;
+  moveCarousel();
+  updateDots();
+  resetTimer();
 });
+
+carouselNext.addEventListener('click', () => {
+  if (counter >= carouselSlide.children.length - 1) return;
+  counter++;
+  moveCarousel();
+  updateDots();
+  resetTimer();
+});
+
+carouselDots.forEach((dot, index) => {
+  dot.addEventListener('click', () => {
+    counter = index;
+    moveCarousel();
+    updateDots();
+    resetTimer();
+  });
+});
+

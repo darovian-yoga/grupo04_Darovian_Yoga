@@ -1,182 +1,299 @@
-.logo{
-    width: 70px;
-}
-body{
-   
-}
-li{
-    display: inline;
-    
-}
-.botoncitos{
-    text-decoration: none;
-    color: black;
-    text-align: right;
-    padding: 1000px;
-}
-h1{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;color: #47c890;
-
-}
-h4{
-font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-color: #755e4d;
-}
-header{
-    background-color: antiquewhite;
+/* --------GENERAL STYLES -------- */
+:root {
+  --bg-color: hsl(0, 0%, 98%);
+  --text-color: hsl(0, 0%, 27%);
+  --primary-bg-color: hsl(273, 97%, 60%);
+  --font: 'Trebuchet MS', Arial, Helvetica;
 }
 
-section{
-    text-align: right;
-    im
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font);
 }
 
-.container{
-    text-align: right: ;
-}
-.kund{
-    width: 500px;
-   height: 500px;
-
-}
-.origen{
-    text-align: left;
-}
-.Kundalini{
-    text-align: left;
+button  {
+  padding: 10px;
+  border: none;
+  border-radius: 50px 50px 50px 50px;
+  font-family: var(--font);
+  cursor: pointer;
 }
 
 /*------ NAVBAR ------*/
-/* Estilos para la barra de navegación */
 .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #333;
-    z-index: 9999;
-    transition: all 0.3s ease-in-out;
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  background-color: var(--primary-bg-color);
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar.hidden {
+  transform: translateY(-100%);
+}
+
+.logo-img {
+  display: flex;
+  justify-content: left;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  padding: 10px;
+}
+
+.logo {
+  display: flex;
+  justify-content: left;
+  padding: 10px;
+}
+
+/*------ nav-links ------*/
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links li a {
+  color: var(--bg-color);
+  text-decoration: none;
+  font-size: 1rem;
+}
   
-  .navbar.hidden {
-    transform: translateY(-100%);
-  }
-  
-  .navbar-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-  }
-  
-  /* Estilos para el logo */
-  .logo {
-    color: #fff;
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-decoration: none;
-  }
-  
-  /* Estilos para el menú de hamburguesas */
-  .burger {
-    display: none;
-    cursor: pointer;
-    margin-right: 10px;
-  }
-  
-  .burger div {
-    width: 25px;
-    height: 3px;
-    background-color: #fff;
-    margin: 5px;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  /* Estilos para el menú de navegación */
+.search {
+  padding: 10px;
+  margin: 10px;
+  border: none;
+  border-radius: 50px 50px 50px 50px;
+  font-family: var(--font);
+}
+
+.login {
+  border: 1px solid var(--bg-color);
+  color: var(--bg-color);
+  background-color: var(--primary-bg-color);
+}
+
+/*------ burger menu ------*/
+.burger {
+  display: none;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: var(--bg-color);
+  margin: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+/*------ style mobile ------*/
+@media screen and (max-width: 768px) {
   .nav-links {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    display: none;
+  }
+  
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 30vh;
+  }
+
+  .navbar-container {
+    flex-direction: column;
+  }
+  
+  .logo {
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .burger {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .nav-links.active {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    width: 100%;
+    background-color: var(--primary-bg-color);
+    opacity: 0.5;
+    z-index: 999;
+    position: absolute;
+    top: 33vh;
+    left: 0;
   }
-  
-  .nav-links li {
-    margin-left: 20px;
+
+  .nav-links.active li {
+    margin-top: 20px;
   }
-  
-  .nav-links li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.2rem;
+
+/*------ burger menu ------*/
+  .burger.active {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 10px;
+    right: 10px;
   }
-  
-  /* Estilos para dispositivos móviles */
-  @media screen and (max-width: 768px) {
-    /* ocultar los links de navegación por defecto */
-    .nav-links {
-      display: none;
-    }
-    
-    /* mostrar el logo y burger menu centrados en la parte superior */
-    .navbar-container {
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 40px;
-    }
-    
-    .logo {
-      display: block;
-      text-align: center;
-      margin-bottom: 10px; /* agregar un margen inferior para separar del burger menu */
-    }
-    
-    .burger {
-      display: block;
-      position: absolute;
-      top: 10px; /* ajustar la posición vertical */
-      right: 10px; /* ajustar la posición horizontal */
-    }
-    
-    /* agregar estilos para mostrar los links de navegación al activar el burger menu */
-    .nav-links.active {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      width: 100%;
-      background-color: #333;
-      z-index: 999;
-      position: absolute;
-      top: 40px; /* ajustar la posición vertical */
-      left: 0; /* ajustar la posición horizontal */
-    }
-  
-    .nav-links.active li {
-      margin-top: 20px;
-    }
-  
-    /* Estilos para el menú de hamburguesas activado */
-    .burger.active {
-      display: flex;
-      flex-direction: column;
-      position: fixed;
-      top: 10px;
-      right: 10px;
-    }
-  
-    .burger.active .line1 {
-      transform: rotate(-45deg) translate(-9px, 9px);
-    }
-  
-    .burger.active .line2 {
-      opacity: 0;
-    }
-  
-    .burger.active .line3 {
-      transform: rotate(45deg) translate(-9px, -9px);
-    }
+
+  .burger.active .line1 {
+    transform: rotate(-45deg) translate(-9px, 9px);
   }
+
+  .burger.active .line2 {
+    opacity: 0;
+  }
+
+  .burger.active .line3 {
+    transform: rotate(45deg) translate(-9px, -9px);
+  }
+}
   
-  
+/*------ CAROUSEL ------*/
+.carousel-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 115px;
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .carousel-container {
+    margin-top: 33vh;
+  }
+}
+
+.carousel-slide {
+  display: flex;
+  list-style: none;
+  width: 400%;
+  margin: 0;
+  padding: 0;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide li {
+  width: 25%;
+}
+
+.carousel-button-prev {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.carousel-button-next {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.carousel-button {
+  background-color: var(--bg-color);
+  border: none;
+  color: var(--text-color);
+  cursor: pointer;
+  font-size: 24px;
+  margin: 0 10px;
+  padding: 10px;
+  outline: none;
+}
+
+.carousel-navigation {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-dot {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.carousel-dot.active {
+  background-color: #333;
+}
+
+
+/*------ Three columns ------*/
+.titule{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 10px;
+  padding: 30px;
+  font-size: 2em;
+}
+
+.container-col {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  flex: 1;
+  margin: 10px;
+  padding: 30px;
+  border: 2px solid var(--text-color);
+  border-radius: 10px;
+  transition: border-color 0.3s ease;
+}
+
+.col:hover {
+  border-color: var(--primary-bg-color);
+}
+
+@media (max-width: 768px) {
+  .col {
+    flex-basis: 100%;
+  }
+}
