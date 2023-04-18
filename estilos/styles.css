@@ -1,9 +1,9 @@
 /* --------GENERAL STYLES -------- */
 :root {
-  --bg-color: hsl(0, 0%, 90%);
-  --text-color: hsl(0, 0%, 13%);
+  --bg-color: hsl(0, 0%, 98%);
+  --text-color: hsl(0, 0%, 27%);
   --primary-bg-color: hsl(273, 97%, 60%);
-  --font: "Verdana";
+  --font: 'Trebuchet MS', Arial, Helvetica;
 }
 
 body {
@@ -257,4 +257,43 @@ button  {
 
 .carousel-dot.active {
   background-color: #333;
+}
+
+
+/*------ Three columns ------*/
+.titule{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 10px;
+  padding: 30px;
+  font-size: 2em;
+}
+
+.container-col {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  flex: 1;
+  margin: 10px;
+  padding: 30px;
+  border: 2px solid var(--text-color);
+  border-radius: 10px;
+  transition: border-color 0.3s ease;
+}
+
+.col:hover {
+  border-color: var(--primary-bg-color);
+}
+
+@media (max-width: 768px) {
+  .col {
+    flex-basis: 100%;
+  }
 }

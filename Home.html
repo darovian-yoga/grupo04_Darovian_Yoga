@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./estilos/styles.css">
-</head>
-<body>
 
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./estilos/styles.css">
+</head>
+
+<body>
+  <!-- NAVBAR -->
   <nav class="navbar">
     <img class="logo-img" src="./images/logo.png" width="150px">
     <div class="navbar-container">
@@ -18,12 +20,11 @@
         <li><a href="#">Contact</a></li>
       </ul>
       <form class="" role="search">
-        <input type="search" class="search" placeholder="Search..."
-            aria-label="Search">
+        <input type="search" class="search" placeholder="Search..." aria-label="Search">
       </form>
       <div class="">
-          <button type="button" class="login">Login</button>
-          <button type="button" class="">Sign-up</button>
+        <button type="button" class="login">Login</button>
+        <button type="button" class="">Sign-up</button>
       </div>
       <div class="burger">
         <div class="line1"></div>
@@ -32,7 +33,9 @@
       </div>
     </div>
   </nav>
-  
+
+  <!-- HOME -->
+  <!-- Carousel -->
   <div class="carousel-container">
     <ul class="carousel-slide">
       <li><img src="./images/federacion2.jpg"></li>
@@ -40,8 +43,8 @@
       <li><img src=""></li>
       <li><img src=""></li>
     </ul>
-      <button class="carousel-button carousel-button-prev">&lt;</button>
-      <button class="carousel-button carousel-button-next">&gt;</button>
+    <button class="carousel-button carousel-button-prev">&lt;</button>
+    <button class="carousel-button carousel-button-next">&gt;</button>
     <div class="carousel-navigation">
       <div class="carousel-dots">
         <span class="carousel-dot"></span>
@@ -51,7 +54,38 @@
       </div>
     </div>
   </div>
-  
-      <script src="scripts.js"></script>   
+
+  <!-- Three columns -->
+  <div class="titule">
+    <h3>Más de 35 años de tradición enseñando y difundiendo el Hatha Yoga</h3>
+  </div>
+  <div class="container-col">
+    <div class="col">
+      <img src="./images/icon_asanas.svg" alt="Instructorado" height="60">
+      <h3>Instructorado</h3>
+      <p>El dominio de nuestro cuerpo, por medio de las posturas o asanas, contribuirá a adquirir el total control
+        de las emociones y de la mente. </p>
+    </div>
+  </div>
+  <div class="container-col">
+    <div class="col">
+      <img src="./images/icon_mision.svg" alt="Profesorado" height="60">
+      <h3>Profesorado</h3>
+      <p>Este centro hace hincapié en la investigación y desarrollo del Hatha Yoga, el cual desempeña un importante
+        papel en el crecimiento del ser. </p>
+    </div>
+  </div>
+  <div class="container-col">
+    <div class="col">
+      <img src="./images/icon_yoga.svg" alt="Terapeutico" height="60">
+      <h3>Terapeutico</h3>
+      <p>Terapia personalizada cuya práctica se adapta a los trastornos musculoesqueléticos y psicoemocionales de cada
+        practicante,
+        ayuda a mejorar el estado de salud general de cada persona.. </p>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
 </body>
+
 </html>
