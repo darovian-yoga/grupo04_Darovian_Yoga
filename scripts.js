@@ -15,17 +15,13 @@ window.addEventListener('scroll', () => {
 });
 
 /* ------ BURGER MENU ------ */
-
 const burger = document.querySelector('.burger');
 const nav = document.querySelector('.nav-links');
-const close = document.querySelector('.close');
 
 burger.addEventListener('click', () => {
   nav.classList.toggle('active');
   burger.classList.toggle('active');
 });
-
-
 
 /* ------ CAROUSEL ------ */
 const carouselSlide = document.querySelector('.carousel-slide');

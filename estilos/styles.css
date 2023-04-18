@@ -21,7 +21,6 @@ button  {
 }
 
 /*------ NAVBAR ------*/
-/* Estilos para la barra de navegación */
 .navbar {
   position: fixed;
   top: 0;
@@ -43,36 +42,7 @@ button  {
   padding: 10px;
 }
 
-.search {
-  padding: 10px;
-  margin: 10px;
-  border: none;
-  border-radius: 50px 50px 50px 50px;
-  font-family: var(--font);
-}
-
-.login {
-  border: 1px solid var(--bg-color);
-  color: var(--bg-color);
-  background-color: var(--primary-bg-color);
-}
-
-/* Estilos para el menú de hamburguesas */
-.burger {
-  display: none;
-  cursor: pointer;
-  margin-right: 10px;
-}
-
-.burger div {
-  width: 25px;
-  height: 3px;
-  background-color: var(--bg-color);
-  margin: 5px;
-  transition: all 0.3s ease-in-out;
-}
-
-/* Estilos para el menú de navegación */
+/*------ nav-links ------*/
 .nav-links {
   list-style: none;
   margin: 0;
@@ -91,14 +61,41 @@ button  {
   font-size: 1rem;
 }
   
-/* Estilos para dispositivos móviles */
+.search {
+  padding: 10px;
+  margin: 10px;
+  border: none;
+  border-radius: 50px 50px 50px 50px;
+  font-family: var(--font);
+}
+
+.login {
+  border: 1px solid var(--bg-color);
+  color: var(--bg-color);
+  background-color: var(--primary-bg-color);
+}
+
+/*------ burger menu ------*/
+.burger {
+  display: none;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: var(--bg-color);
+  margin: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+/*------ style mobile ------*/
 @media screen and (max-width: 768px) {
-  /* ocultar los links de navegación por defecto */
   .nav-links {
     display: none;
   }
   
-  /* mostrar el logo y burger menu centrados en la parte superior */
   .navbar-container {
     flex-direction: column;
     align-items: center;
@@ -109,17 +106,16 @@ button  {
   .logo {
     display: block;
     text-align: center;
-    margin-bottom: 10px; /* agregar un margen inferior para separar del burger menu */
+    margin-bottom: 10px;
   }
   
   .burger {
     display: block;
     position: absolute;
-    top: 10px; /* ajustar la posición vertical */
-    right: 10px; /* ajustar la posición horizontal */
+    top: 10px;
+    right: 10px;
   }
   
-  /* agregar estilos para mostrar los links de navegación al activar el burger menu */
   .nav-links.active {
     display: flex;
     flex-direction: column;
@@ -131,15 +127,15 @@ button  {
     opacity: 0.5;
     z-index: 999;
     position: absolute;
-    top: 33vh; /* ajustar la posición vertical */
-    left: 0; /* ajustar la posición horizontal */
+    top: 33vh;
+    left: 0;
   }
 
   .nav-links.active li {
     margin-top: 20px;
   }
 
-  /* Estilos para el menú de hamburguesas activado */
+/*------ burger menu ------*/
   .burger.active {
     display: flex;
     flex-direction: column;
@@ -166,6 +162,15 @@ button  {
   position: relative;
   width: 100%;
   overflow: hidden;
+  margin-top: 115px;
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .carousel-container {
+    margin-top: 33vh;
+  }
 }
 
 .carousel-slide {
@@ -181,6 +186,31 @@ button  {
   width: 25%;
 }
 
+.carousel-button-prev {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.carousel-button-next {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.carousel-button {
+  background-color: var(--bg-color);
+  border: none;
+  color: var(--text-color);
+  cursor: pointer;
+  font-size: 24px;
+  margin: 0 10px;
+  padding: 10px;
+  outline: none;
+}
+
 .carousel-navigation {
   position: absolute;
   bottom: 20px;
@@ -189,17 +219,6 @@ button  {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.carousel-button {
-  background-color: #fff;
-  border: none;
-  color: #333;
-  cursor: pointer;
-  font-size: 24px;
-  margin: 0 10px;
-  padding: 10px;
-  outline: none;
 }
 
 .carousel-dots {
