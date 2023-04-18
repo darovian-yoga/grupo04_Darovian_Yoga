@@ -22,6 +22,10 @@ button  {
 
 /*------ NAVBAR ------*/
 .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
   position: fixed;
   top: 0;
   left: 0;
@@ -35,10 +39,21 @@ button  {
   transform: translateY(-100%);
 }
 
+.logo-img {
+  display: flex;
+  justify-content: left;
+}
+
 .navbar-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: right;
   align-items: center;
+  padding: 10px;
+}
+
+.logo {
+  display: flex;
+  justify-content: left;
   padding: 10px;
 }
 
@@ -96,11 +111,15 @@ button  {
     display: none;
   }
   
-  .navbar-container {
+  .navbar {
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 30vh;
+  }
+
+  .navbar-container {
+    flex-direction: column;
   }
   
   .logo {
