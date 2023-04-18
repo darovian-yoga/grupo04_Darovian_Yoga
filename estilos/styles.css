@@ -45,3 +45,138 @@ section{
 .Kundalini{
     text-align: left;
 }
+
+/*------ NAVBAR ------*/
+/* Estilos para la barra de navegación */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    z-index: 9999;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .navbar.hidden {
+    transform: translateY(-100%);
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  /* Estilos para el logo */
+  .logo {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  /* Estilos para el menú de hamburguesas */
+  .burger {
+    display: none;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Estilos para el menú de navegación */
+  .nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin-left: 20px;
+  }
+  
+  .nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+  
+  /* Estilos para dispositivos móviles */
+  @media screen and (max-width: 768px) {
+    /* ocultar los links de navegación por defecto */
+    .nav-links {
+      display: none;
+    }
+    
+    /* mostrar el logo y burger menu centrados en la parte superior */
+    .navbar-container {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 40px;
+    }
+    
+    .logo {
+      display: block;
+      text-align: center;
+      margin-bottom: 10px; /* agregar un margen inferior para separar del burger menu */
+    }
+    
+    .burger {
+      display: block;
+      position: absolute;
+      top: 10px; /* ajustar la posición vertical */
+      right: 10px; /* ajustar la posición horizontal */
+    }
+    
+    /* agregar estilos para mostrar los links de navegación al activar el burger menu */
+    .nav-links.active {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      width: 100%;
+      background-color: #333;
+      z-index: 999;
+      position: absolute;
+      top: 40px; /* ajustar la posición vertical */
+      left: 0; /* ajustar la posición horizontal */
+    }
+  
+    .nav-links.active li {
+      margin-top: 20px;
+    }
+  
+    /* Estilos para el menú de hamburguesas activado */
+    .burger.active {
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      top: 10px;
+      right: 10px;
+    }
+  
+    .burger.active .line1 {
+      transform: rotate(-45deg) translate(-9px, 9px);
+    }
+  
+    .burger.active .line2 {
+      opacity: 0;
+    }
+  
+    .burger.active .line3 {
+      transform: rotate(45deg) translate(-9px, -9px);
+    }
+  }
+  
+  
