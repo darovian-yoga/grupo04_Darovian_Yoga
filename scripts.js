@@ -23,11 +23,9 @@ const close = document.querySelector('.close');
 burger.addEventListener('click', () => {
   nav.classList.toggle('active');
   burger.classList.toggle('active');
-  close.classList.toggle('active');
 });
 
 close.addEventListener('click', () => {
   nav.classList.remove('active');
   burger.classList.remove('active');
-  close.classList.remove('active');
 });
