@@ -23,142 +23,200 @@ button  {
 /*------ NAVBAR ------*/
 /* Estilos para la barra de navegación */
 .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 9999;
-    background-color: var(--primary-bg-color);
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .navbar.hidden {
-    transform: translateY(-100%);
-  }
-  
-  .navbar-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  background-color: var(--primary-bg-color);
+  transition: all 0.3s ease-in-out;
+}
 
-  .search {
-    padding: 10px;
-    margin: 10px;
-    border: none;
-    border-radius: 50px 50px 50px 50px;
-    font-family: var(--font);
-  }
+.navbar.hidden {
+  transform: translateY(-100%);
+}
 
-  .login {
-    border: 1px solid var(--bg-color);
-    color: var(--bg-color);
-    background-color: var(--primary-bg-color);
-  }
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
 
-  /* Estilos para el menú de hamburguesas */
-  .burger {
-    display: none;
-    cursor: pointer;
-    margin-right: 10px;
-  }
+.search {
+  padding: 10px;
+  margin: 10px;
+  border: none;
+  border-radius: 50px 50px 50px 50px;
+  font-family: var(--font);
+}
+
+.login {
+  border: 1px solid var(--bg-color);
+  color: var(--bg-color);
+  background-color: var(--primary-bg-color);
+}
+
+/* Estilos para el menú de hamburguesas */
+.burger {
+  display: none;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: var(--bg-color);
+  margin: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Estilos para el menú de navegación */
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links li a {
+  color: var(--bg-color);
+  text-decoration: none;
+  font-size: 1rem;
+}
   
-  .burger div {
-    width: 25px;
-    height: 3px;
-    background-color: var(--bg-color);
-    margin: 5px;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  /* Estilos para el menú de navegación */
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 768px) {
+  /* ocultar los links de navegación por defecto */
   .nav-links {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
+    display: none;
+  }
+  
+  /* mostrar el logo y burger menu centrados en la parte superior */
+  .navbar-container {
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    height: 30vh;
   }
   
-  .nav-links li {
-    margin-left: 20px;
+  .logo {
+    display: block;
+    text-align: center;
+    margin-bottom: 10px; /* agregar un margen inferior para separar del burger menu */
   }
   
-  .nav-links li a {
-    color: var(--bg-color);
-    text-decoration: none;
-    font-size: 1rem;
+  .burger {
+    display: block;
+    position: absolute;
+    top: 10px; /* ajustar la posición vertical */
+    right: 10px; /* ajustar la posición horizontal */
   }
   
-  /* Estilos para dispositivos móviles */
-  @media screen and (max-width: 768px) {
-    /* ocultar los links de navegación por defecto */
-    .nav-links {
-      display: none;
-    }
-    
-    /* mostrar el logo y burger menu centrados en la parte superior */
-    .navbar-container {
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 30vh;
-    }
-    
-    .logo {
-      display: block;
-      text-align: center;
-      margin-bottom: 10px; /* agregar un margen inferior para separar del burger menu */
-    }
-    
-    .burger {
-      display: block;
-      position: absolute;
-      top: 10px; /* ajustar la posición vertical */
-      right: 10px; /* ajustar la posición horizontal */
-    }
-    
-    /* agregar estilos para mostrar los links de navegación al activar el burger menu */
-    .nav-links.active {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 70vh;
-      width: 100%;
-      background-color: var(--primary-bg-color);
-      opacity: 0.5;
-      z-index: 999;
-      position: absolute;
-      top: 33vh; /* ajustar la posición vertical */
-      left: 0; /* ajustar la posición horizontal */
-    }
-  
-    .nav-links.active li {
-      margin-top: 20px;
-    }
-  
-    /* Estilos para el menú de hamburguesas activado */
-    .burger.active {
-      display: flex;
-      flex-direction: column;
-      position: fixed;
-      top: 10px;
-      right: 10px;
-    }
-  
-    .burger.active .line1 {
-      transform: rotate(-45deg) translate(-9px, 9px);
-    }
-  
-    .burger.active .line2 {
-      opacity: 0;
-    }
-  
-    .burger.active .line3 {
-      transform: rotate(45deg) translate(-9px, -9px);
-    }
+  /* agregar estilos para mostrar los links de navegación al activar el burger menu */
+  .nav-links.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    width: 100%;
+    background-color: var(--primary-bg-color);
+    opacity: 0.5;
+    z-index: 999;
+    position: absolute;
+    top: 33vh; /* ajustar la posición vertical */
+    left: 0; /* ajustar la posición horizontal */
   }
+
+  .nav-links.active li {
+    margin-top: 20px;
+  }
+
+  /* Estilos para el menú de hamburguesas activado */
+  .burger.active {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+  }
+
+  .burger.active .line1 {
+    transform: rotate(-45deg) translate(-9px, 9px);
+  }
+
+  .burger.active .line2 {
+    opacity: 0;
+  }
+
+  .burger.active .line3 {
+    transform: rotate(45deg) translate(-9px, -9px);
+  }
+}
   
-  
+/*------ CAROUSEL ------*/
+.carousel-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-slide {
+  display: flex;
+  list-style: none;
+  width: 400%;
+  margin: 0;
+  padding: 0;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide li {
+  width: 25%;
+}
+
+.carousel-navigation {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-button {
+  background-color: #fff;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  font-size: 24px;
+  margin: 0 10px;
+  padding: 10px;
+  outline: none;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-dot {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.carousel-dot.active {
+  background-color: #333;
+}
