@@ -197,7 +197,7 @@ background-color: var(--secondary-bg-color);
 .carousel-container {
   position: relative;
   width: 100%;
-  margin-top: 80px;
+  margin-top: 114px;
   transition: all 0.4s ease;
   overflow: hidden;
 }
@@ -222,7 +222,6 @@ background-color: var(--secondary-bg-color);
   display: block;
   width: 25%;
   min-height: 10vh;
-  max-height: 90vh;
   transition: all 0.4s ease;
 }
 
