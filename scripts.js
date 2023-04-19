@@ -30,10 +30,9 @@ const carouselPrev = document.querySelector('.carousel-button-prev');
 const carouselNext = document.querySelector('.carousel-button-next');
 
 let counter = 0;
-const size = carouselSlide.children[0].offsetWidth;
 
 function moveCarousel() {
-  carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+  carouselSlide.style.transform = 'translateX(' + (-25 * counter) + '%)';
 }
 
 function updateDots() {
