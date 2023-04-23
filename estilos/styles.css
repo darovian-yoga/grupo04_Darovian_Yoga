@@ -314,3 +314,11 @@ background-color: var(--secondary-bg-color);
     flex-basis: 100%;
   }
 }
+
+
+.contenedor-col{
+background:red;
+display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
