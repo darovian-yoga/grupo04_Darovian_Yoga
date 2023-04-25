@@ -1,0 +1,87 @@
+@keyframes fadeIn {
+	from {
+	  opacity: 0;
+	}
+	to {
+	  opacity: 3;
+	}
+  }
+
+  .mindice {
+	margin-top: 100px;
+  }
+
+.micajita {
+    animation: fadeIn 3s ease-in-out;
+	width: 400px;
+	height: 450px
+	margin: auto;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(242, 242, 242, 0.5);
+	border: 1px solid #ddd;
+	border-radius: 5px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+	padding: 20px;
+			}
+
+.milogo {
+	animation: fadeIn 3s ease-in-out;
+	align-items: center;
+	flex-direction: column;
+}
+
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-color: hsl(273, 11%, 60%);
+	font-family: 'Trebuchet MS', Arial, Helvetica;
+}
+
+label {
+    display: block;
+    text-align: center;
+}
+
+input {
+    background-color: rgb(96, 69, 109);
+    color: white;
+    border: 1px outset;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+	box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+}
+
+input:hover {
+	border-radius: 0px;
+	border-width: 5px;
+	background-color: #9f89b1;
+    color: white;
+	padding: 0px 20px;
+}
+
+.btn {
+	background: linear-gradient(to right, rgb(96, 69, 109), #655383, #ac93c4);
+    color: white;
+    border: outset;
+    padding: 10px 30px;
+	margin: 10px;
+    border-radius: 50px;
+    cursor: pointer;
+	box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+	transition: all 0.3s ease-in-out;
+}	
+
+.btn:hover {
+	border-radius: 4px;
+	border-width: 4px;
+	transform: translateX(5px);
+	}
+

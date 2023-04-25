@@ -7,18 +7,6 @@
 </head>
 
 <body>
-    
-    <div class="mindice">
-    <header>
-		<nav>
-			<ul>
-				<li><a href="#">Inicio</a></li>
-				<li><a href="#about">¿Quiénes somos?</a></li>
-				<li><a href="#contact">Contactanos</a></li>
-			</ul>
-		</nav>
-	</header>
-    </div>
 
     <div class="milogo">
     <img src="../images/logo.png" alt="Logo de la página" width="400" height="auto">
@@ -27,24 +15,26 @@
     <div class="micajita">
 	    
         <h1>Ingresá con tu cuenta</h1>
+        
 	    <form action="#" method="post">
         <label for="email">Correo electrónico:</label>
-        <input type="email" id="email" autocomplete="email" name="email" required><br><br>
+        <input type="email" id="email" autocomplete="email" name="email" required>
 		
         <label for="password">Contraseña:</label>
-		<input type="password" id="password" name="password" autocomplete="current-password" required><br><br>
-        
+		<input type="password" id="password" name="password" autocomplete="current-password" required>
+        <br> <br> <br>
         <input type="submit" value="Iniciar sesión">
+
+
         <p>¿No tenés una cuenta? <a href="registro.html">Registrate ahora</a>.</p>
 
-<br>
 <hr>
 
         <h2>Ingresá con tus redes</h2>
         <button onclick="signInWithTwitter()" class="btn">Iniciar sesión con Twitter</button>
-        <br> <br>
+ 
         <button onclick="signInWithFacebook()" class="btn">Iniciar sesión con Facebook</button>
-        <br> <br>
+ 
         <button onclick="signInWithGoogle()" class="btn">Iniciar sesión con Google</button>
 
 	    </form>
