@@ -1,24 +1,19 @@
 html{
     font-size: 64.5%;
 }
+
 footer{
 
     margin-top: 50%;
 
-}
 
-  
-    to {
-      margin-left: 0%;
-      width: 100%;
-      }
 
 section{
     
     animation-delay: 4s;
 }
 .contacto{
-    background-image: url(..//Imagenes/contenedor6.jpg);
+    background-image: url(..//Imagenes/contenedor12.jpg)
     box-sizing: content-box;
     width: 80%;
     height: 50%;
@@ -30,8 +25,6 @@ section{
     color: white;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     margin-right: 20px;
-}
-
 
 
 h1{
@@ -126,4 +119,10 @@ padding: 15px;
 
 .sectionContacto{
     margin-top: 60%;
+    }
+    
+.h4col{
+    color: grey;
+    display: flexbox;
 }
+
