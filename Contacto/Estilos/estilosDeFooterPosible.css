@@ -1,0 +1,27 @@
+
+
+.footerPosible{
+background: hsl(273, 96%, 55%);
+display: flex;
+align-items: center;
+justify-content: center;
+
+
+}
+ul li{
+    list-style: none;
+
+}
+.footerPosible2{
+    background: hsla(273, 96%, 55%, 0.973);
+display: flex;
+align-items: center;
+justify-content: center;
+
+}
+
+p{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+font-size: small;
+}
+
