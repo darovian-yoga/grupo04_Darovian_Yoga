@@ -5,17 +5,28 @@
 	to {
 	  opacity: 3;
 	}
-  }
+}
 
-  .mindice {
-	margin-top: 100px;
-  }
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 90vh;
+	background-color: hsl(273, 11%, 60%);
+	font-family: 'Trebuchet MS', Helvetica;
+}
+
+.milogo {
+	animation: fadeIn 3s ease-in-out;
+	align-items: center;
+	display: flex;
+}
 
 .micajita {
     animation: fadeIn 3s ease-in-out;
 	width: 400px;
-	height: 450px
-	margin: auto;
+	height: 500px;
 	text-align: center;
 	display: flex;
 	flex-direction: column;
@@ -25,46 +36,43 @@
 	border: 1px solid #ddd;
 	border-radius: 5px;
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
-	padding: 20px;
-			}
+	padding: 30px;
+	margin-bottom: 20px;
+	margin-top: 10px;
+}
 
-.milogo {
-	animation: fadeIn 3s ease-in-out;
-	align-items: center;
-	flex-direction: column;
+.correoemail label {
+	width: 150px;
+	margin: 5px;
+	display: inline-block;
+	text-align: right;
+}
+.correoemail input[type="submit"] {
+	display: inline-block;
 }
 
 
-body {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100vh;
-	background-color: hsl(273, 11%, 60%);
-	font-family: 'Trebuchet MS', Arial, Helvetica;
-}
-
-label {
-    display: block;
-    text-align: center;
-}
-
-input {
-    background-color: rgb(96, 69, 109);
-    color: white;
-    border: 1px outset;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
+.iniciosesion input[type="submit"] {
+  	background-color: rgb(96, 69, 109);
+  	color: #fff;
+	padding: 5px 10px;
+	border-radius: 5px;
+	border-width: 1px;
+	cursor: pointer;
 	box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+	width: 100px;
+	margin-top: 15px
 }
 
-input:hover {
-	border-radius: 0px;
-	border-width: 5px;
+.iniciosesion:hover input[type="submit"] {
 	background-color: #9f89b1;
-    color: white;
-	padding: 0px 20px;
+    color: #fff;
+	padding: 5px 15px;
+	border-radius: 10px;
+	width: 2px;
+	cursor: pointer;
+	width: 120px;
+	transform: scale(1.1);
 }
 
 .btn {
@@ -80,8 +88,10 @@ input:hover {
 }	
 
 .btn:hover {
+	background: #9f89b1;
+	width: 250px;
 	border-radius: 4px;
-	border-width: 4px;
 	transform: translateX(5px);
+	transform: scale(1.1);
 	}
 
