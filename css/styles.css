@@ -53,6 +53,15 @@ body {
 	display: inline-block;
 }
 
+.fecha_nacimiento label {
+	margin-left: 35px;
+}
+
+.fecha_nacimiento input[type="date"] {
+	width: 140px;
+	margin-right: 30px;
+}
+
 .iniciosesion input[type="submit"] {
 	width: 100px;
 	padding: 5px 10px;

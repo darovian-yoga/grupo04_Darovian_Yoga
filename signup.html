@@ -15,42 +15,56 @@
     <div class="micajita"> 
 	    <form action="#" method="post">
             
-            <h1>Ingresá con tu cuenta</h1>
+            <h1>Registrate </h1>
 
-            <div class="correoemail">
+            <div class="correoemail"> 
+                <label for="txtNombre">Nombre y apellido:</label>
+                <input type="text" id="txtNombre" name="txtNombre" required
+                placeholder="Nombre completo">
+
+                <div class="fecha_nacimiento">
+                    <label for="fecha_nacimiento">Fecha nacimiento:</label>
+                    <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required
+                    placeholder="Solo mayores de 16">
+                </div>
                 <label for="email">Correo electrónico:</label>
                 <input type="email" id="email" autocomplete="email" name="email" required
                 placeholder="ejemplo@gmail.com"> 
+
+                <label for="ciudad">Ciudad:</label>
+                <input type="text" id="ciudad" name="ciudad" required
+                placeholder="Ciudad en la que reside">
+
+                <label for="teléfono">Número de teléfono:</label>
+                <input type="tel" id="teléfono" name="teléfono" required
+                placeholder="Número sin guiones">
 		
-                <label for="password">Contraseña:</label>
+                <label for="password">Cree su contraseña:</label>
 		        <input type="password" id="password" name="password" autocomplete="current-password" required
-                placeholder="Ingrese su contraseña">
+                placeholder="Cree una contraseña">
             </div>
 
             <div class="iniciosesion">
-                <input type="submit" value="Iniciar sesión">
+                <input type="submit" value="Registrate">
             </div>
-
-            <p> <a href="recuperarcontraseña.html">Olvidé mi contraseña</a>. <br>
-                ¿No tenés una cuenta? <a href="signup.html">Registrate ahora</a>.</p>
 
             <hr>
 
-            <h2>Ingresá con tus redes</h2>
+            <h2>Registrate con tus redes</h2>
 
-            <button onclick="signInWithTwitter()" class="btn">Iniciar sesión con Twitter
+            <button onclick="signUpWithTwitter()" class="btn">Registrate con Twitter
                 <div class="btn-img">
                     <img src="./images/icon_twitter.png" alt="Ícono de Twitter" width="20" height="20">
                 </div>
             </button>
 
-            <button onclick="signInWithFacebook()" class="btn">Iniciar sesión con Facebook
+            <button onclick="signUpWithFacebook()" class="btn">Registrate con Facebook
                 <div class="btn-img">
                     <img src="./images/icon_facebook.png" alt="Ícono de Facebook" width="20" height="20">
                 </div>
             </button>
 
-            <button onclick="signInWithGoogle()" class="btn">Iniciar sesión con Google
+            <button onclick="signUpWithGoogle()" class="btn">Registrate con Google
                 <div class="btn-img">
                     <img src="./images/icon_google.png" alt="Ícono de Google" width="20" height="20">
                 </div>    
