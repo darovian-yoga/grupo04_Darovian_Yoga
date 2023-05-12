@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Login</title>
+    <link rel="stylesheet" type="text/css" href="./css/styles.css">
+</head>
+
+<body>
+
+    <div class="milogo">
+        <img src="./images/logo.png" alt="Logo de la página" width="400" height="auto">
+    </div>
+
+    <div class="micajita"> 
+	    <form action="#" method="post">
+            
+            <h1>Ingresá con tu cuenta</h1>
+
+            <div class="correoemail">
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" autocomplete="email" name="email" required
+                placeholder="ejemplo@gmail.com"> 
+		
+                <label for="password">Contraseña:</label>
+		        <input type="password" id="password" name="password" autocomplete="current-password" required
+                placeholder="Ingrese su contraseña">
+            </div>
+
+            <div class="iniciosesion">
+                <input type="submit" value="Iniciar sesión">
+            </div>
+
+            <p> <a href="recuperarcontraseña.html">Olvidé mi contraseña</a>. <br>
+                ¿No tenés una cuenta? <a href="signup.html">Registrate ahora</a>.</p>
+
+            <hr>
+
+            <h2>Ingresá con tus redes</h2>
+
+            <button onclick="signInWithTwitter()" class="btn">Iniciar sesión con Twitter
+                <div class="btn-img">
+                    <img src="./images/icon_twitter.png" alt="Ícono de Twitter" width="20" height="20">
+                </div>
+            </button>
+
+            <button onclick="signInWithFacebook()" class="btn">Iniciar sesión con Facebook
+                <div class="btn-img">
+                    <img src="./images/icon_facebook.png" alt="Ícono de Facebook" width="20" height="20">
+                </div>
+            </button>
+
+            <button onclick="signInWithGoogle()" class="btn">Iniciar sesión con Google
+                <div class="btn-img">
+                    <img src="./images/icon_google.png" alt="Ícono de Google" width="20" height="20">
+                </div>    
+            </button>
+
+        </form>
+    </div>
+
+    <script src="script_login.js"></script>
+
+</body>
+</html>
