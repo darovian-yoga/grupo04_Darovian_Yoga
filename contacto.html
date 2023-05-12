@@ -1,94 +1,182 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
+
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <script src="https://kit.fontawesome.com/76f04db628.js" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="./estilos/estilosContacto.css">
+
     <title>Contacto</title>
+
 </head>
 
+
+
 <body>
+
     <section class="sectionContacto">
+
         <div class="contacto">
+
             <div class="colContacto">
+
                 <H1>
+
                     <strong>Contacto</strong>
+
                 </H1>
+
                 <h4><i class="fa-solid fa-envelope"></i>darovianyoga@gmail.com</h4>
+
                 <h4> <i class="fa-solid fa-phone"></i>(011) 4085-1460</h4>
+
                 <h4> <i class="fa-sharp fa-solid fa-location-dot"></i>Estudio en Microcentro (pedir dirección por
+
                     WhatsApp)</h4>
+
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.014225071031!2d-58.3821173!3d-34.6038018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacf425a4a19%3A0xaf19ab7297421a8!2sAv.%209%20de%20Julio%20%26%20Av.%20Pres.%20Roque%20S%C3%A1enz%20Pe%C3%B1a%2C%20C1048%20CABA!5e0!3m2!1ses-419!2sar!4v1683344652133!5m2!1ses-419!2sar"
                     class="mapa" width="150" height="150" style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
+
             </div>
-            <form class="contenedorForm">
-                <h1> <strong>Envianos tu consulta</strong></h1> 
+
+            <form class="contenedorForm" id="fomulario">
+
+                <h1> <strong>Envianos tu consulta</strong></h1>
+
                 <div class="">
-                    <input type="text" class="form-control" id="inputPassword" placeholder="Nombre">
-                </div>
-                <div class="">
-                    <input type="email" class="form-control input-lg" id="inputEmail4" placeholder="Correo Electrónico"
-                        imput>
-                </div>
-                <div class="">
-                    <input type="text" class="form-control" id="inputAddress" placeholder="Teléfono">
-                </div>
-                <div class="">
-                    <p class="pForm"> <textarea name="Mensaje" rows="4" placeholder="Mensaje" cols="33"></textarea></p>
+
+                    <input type="text" class="form-control" id="nombreForm" placeholder="Nombre" required>
+
                 </div>
 
                 <div class="">
-                    <button type="submit" class="botonEnviar">Enviar</button>
+
+                    <input type="email" class="form-control input-lg" id="mailForm" placeholder="Correo Electrónico"required
+                        imput>
+
                 </div>
+
+                <div class="">
+
+                    <input type="text" class="form-control" id="teleForm" placeholder="Teléfono"
+                        style="font-family: bold;" required>
+                </div>
+
+                <div class="">
+
+                    <p class="pForm"> <textarea id="mensajeForm" name="Mensaje" rows="4" placeholder="Mensaje"
+                            cols="33"></textarea></p>
+
+                </div>
+
+
+
+                <div class="">
+
+                    <button type="submit" class="botonEnviar" id="btn">Enviar</button>
+
+                </div>
+
         </div>
-        <p>
-            This site is protected by reKATCHUP and the Google <a href="https://policies.google.com/privacy">Privacy
-                Policy</a> and <a href="https://policies.google.com/terms">Terms of Service</a> apply.</p>
 
         </form>
 
+        <p>
+
+            This site is protected by reKATCHUP and the Google <a href="https://policies.google.com/privacy">Privacy
+
+                Policy</a> and <a href="https://policies.google.com/terms">Terms of Service</a> apply.</p>
+
     </section>
+
     <footer>
 
+
+
         <div class="footerPosible">
+
             <div class="footerposible-col">
+
                 <ul>
+
                     <li><a href="https://www.instagram.com/"><i class="fa-brands fa-2x fa-instagram"></i></a></li>
+
                 </ul>
+
             </div>
+
+
 
             <div class="footerPosible">
+
                 <div class="footerposible-col">
+
                     <ul>
+
                         <li><a href="https://es-la.facebook.com/"><i class="fa-brands fa-2x fa-square-facebook"></i></a>
+
                         </li>
+
                     </ul>
+
                 </div>
+
                 <ul>
+
                     <div class="footerPosible">
+
                         <div class="footerposible-col">
-                            <li><a href="https://api.whatsapp.com/send/?phone=5491140851460"><i
+
+                            <li><a href="https://iconos8.es/icon/ZRiAFreol5mE/instagram"><i
                                         class="fa-brands fa-2x fa-whatsapp"></i></a></li>
+
                 </ul>
+
             </div>
+
         </div>
+
         <div class="footerPosible2">
+
             <div class="footerPosible2-col">
+
                 <p> <strong> © 2023 Centro de yoga y meditacion | DAROVIAN YOGA </strong></p>
 
+
+
             </div>
-        </div>
 
         </div>
+
+
+
+        </div>
+
+
 
     </footer>
+
+    <script src="https://kit.fontawesome.com/76f04db628.js" crossorigin="anonymous"></script>
+
+    <script src="app.js"></script>
+
+    
+
 </body>
+
+
 
 </html>

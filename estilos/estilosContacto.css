@@ -1,151 +1,289 @@
 /*/////Contacto////*/
 
+ 
+
 .sectionContacto {
+
     margin-top: 60%;
-    background-image: url(../images/fondoContacto8.jpg);
+
+    background-image: url(../images/buda.jpeg);
+
     width: 100%;
 
+ 
 
 }
+
+ 
 
 .contacto {
+
     color: grey;
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
     padding: 70px;
+
     width: 80%;
+
     height: 50%;
 
+ 
 
 }
+
+ 
 
 .colContacto {
+
     display: flex;
+
     flex-direction: column;
+
     align-items: center;
+
     justify-content: left;
+
     margin-right: 100px;
+
     opacity: 0.8;
 
+ 
 
 }
+
+ 
 
 h1 {
+
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
     font-size: 20px
+
 }
+
+ 
 
 h4 {
+
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
     font-size: 14px;
 
+ 
+
 }
+
+ 
 
 /*////////FORMULARIO/////////////*/
 
+ 
+
 .contenedorForm {
+
     display: flex;
+
     align-items: center;
+
     justify-content: left;
+
     flex-direction: column;
+
     color: rgb(68, 68, 68);
+
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
     margin-right: 20px;
+
     font-size: 18px;
+
     margin-left: 50px;
+
     opacity: 0.5;
+
 }
+
 .form-control {
 
+ 
+
     border: none;
+
     border-radius: 0px;
+
     border-bottom: 1px solid black;
+
     padding: 10px 0;
+
     margin: 10px 0;
+
     background: rgb(207, 130, 243, 0.0);
 
+ 
+
 }
 
+ 
 
 .botonEnviar {
-    background:#BAB5EF;
+
+    background:#c812ff;
+
     width: 90px;
+
     border-radius: 10px;
+
     border: none;
+
     text-decoration: none;
+
     height: 40px;
-    color: black;
+
+    color: rgb(17, 1, 1);
+
     font-size: 20px;
 
+ 
 
 }
+
+ 
 
 .botonEnviar:hover {
-    background: #ef80f3;
+
+    background: #f262f7ea;
+
     width: 90px;
+
     border-radius: 10px;
+
     border: none;
+
     text-decoration: none;
+
     height: 40px;
+
     color: white;
-    
+
+   
+
 }
 
+ 
 
 /*//////Footer//////*/
+
 .footerPosible {
+
     background: #DCB0EB;
+
     display: flex;
+
     justify-content: center;
+
     ;
+
     align-items: center
+
 }
+
+ 
 
 ul li {
+
     list-style: none;
 
+ 
+
 }
+
+ 
 
 .footerPosible2 {
+
     background: #BAB5EF;
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
     color: white;
+
     padding-top: 20px;
 
+ 
+
 }
+
+ 
 
 p {
+
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
     font-size: small;
+
 }
 
+ 
+
 .footerposible-col {
+
     padding: 0.5%;
+
 }
+
+ 
 
 .footerposible2-col {
 
+ 
+
     color: white;
+
     padding: 0.5%;
+
 }
 
+ 
+
 .fa-whatsapp,
+
 .fa-square-facebook,
+
 .fa-instagram{
+
     color:white
+
 }
+
 .fa-whatsapp:hover{
+
     color: #25D366;
+
 }
+
 .fa-square-facebook:hover{
+
     color: #144CA3
+
 }
+
 .fa-instagram:hover{
+
 color:#C90188
+
 }
+
 .mapa {
+
     margin-top: 20px;
+
 }
