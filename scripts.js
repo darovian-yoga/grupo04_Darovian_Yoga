@@ -79,3 +79,26 @@ carouselDots.forEach((dot, index) => {
   });
 });
 
+//Formulario de Validación
+let formu = document.querySelector('form');
+
+formu.addEventListener('submit', function (evento) {
+
+    evento.preventDefault();
+
+    let nombre = document.getElementById('nombreForm').value;
+
+    let mail = document.getElementById('mailForm').value;
+
+    let telefon = document.getElementById('teleForm').value;
+
+    let mensaje = document.getElementById('mensajeForm').value;
+
+    let saludo = 'Hola' + '    ' + '     ' + nombre + '           ' + 'en 48hs hábiles tendrá una respuesta en el correo electrónico ingresado.';
+
+    function hola() {
+
+        return saludo
+    }
+    console.log(document.write(saludo));
+})
