@@ -32,6 +32,9 @@ ul li {
   list-style: none;
 }
 
+.resaltado {
+  background-color: yellow;
+}
 /*------ NAVBAR ------*/
 .navbar {
   display: flex;
@@ -87,19 +90,28 @@ ul li {
   text-decoration: none;
   font-size: 1rem;
 }
-  
+
+.login {
+  border: 1px solid var(--bg-color);
+  background-color: var(--primary-bg-color);
+}
+
+.login a {
+  color: var(--bg-color);
+  text-decoration: none;
+}
+
+.singup {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
 .search {
   padding: 10px;
   margin: 10px;
   border: none;
   border-radius: 50px 50px 50px 50px;
   font-family: var(--font);
-}
-
-.login {
-  border: 1px solid var(--bg-color);
-  color: var(--bg-color);
-  background-color: var(--primary-bg-color);
 }
 
 .nav-links li a:hover {
@@ -131,7 +143,7 @@ ul li {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 30vh;
+    height: 35vh;
   }
 
   .navbar-container {
@@ -278,6 +290,13 @@ background-color: var(--secondary-bg-color);
 
 .carousel-dot.active {
   background-color: var(--text-color);
+}
+
+/* ------- Section -------- */
+.up-section {
+  opacity: 0; /* Establecemos la opacidad inicial en 0 para la sección */
+  transform: translateY(50px); /* Establecemos una transformación de 50px hacia abajo */
+  transition: all 1s ease; /* Agregamos una transición suave para la transformación */
 }
 
 /*------ Three columns ------*/

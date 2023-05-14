@@ -1,7 +1,7 @@
+/* ------ NAVABAR EFFECT ------ */
 const navbar = document.querySelector('.navbar');
 let prevScrollPos = window.pageYOffset;
 
-/* ------ NAVABAR EFFECT ------ */
 window.addEventListener('scroll', () => {
   const currentScrollPos = window.pageYOffset;
 
@@ -21,6 +21,84 @@ const nav = document.querySelector('.nav-links');
 burger.addEventListener('click', () => {
   nav.classList.toggle('active');
   burger.classList.toggle('active');
+});
+
+/* ------ Buscador ------ */
+const searchInput = document.getElementById('search-input');
+const paragraphs = document.getElementsByTagName('p');
+const headers = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+
+searchInput.addEventListener('keydown', (event) => {
+  if (event.key === 'Enter') {
+    const searchTerm = event.target.value.trim().toLowerCase();
+
+    if (searchTerm.length > 0) {
+      let count = 0;
+
+      for (let i = 0; i < paragraphs.length; i++) {
+        const paragraph = paragraphs[i];
+        const text = paragraph.textContent.toLowerCase();
+
+        if (text.includes(searchTerm)) {
+          const words = text.split(' ');
+          const newWords = [];
+          words.forEach((word) => {
+            if (word.includes(searchTerm)) {
+              newWords.push(`<span class="resaltado">${word}</span>`);
+            } else {
+              newWords.push(word);
+            }
+          });
+          paragraph.innerHTML = newWords.join(' ');
+          count++;
+        } else {
+          const html = paragraph.innerHTML.replace(/<span class="resaltado">|<\/span>/gi, '');
+          paragraph.innerHTML = html;
+        }
+      }
+
+      for (let i = 0; i < headers.length; i++) {
+        const header = headers[i];
+        const text = header.textContent.toLowerCase();
+
+        if (text.includes(searchTerm)) {
+          const words = text.split(' ');
+          const newWords = [];
+          words.forEach((word) => {
+            if (word.includes(searchTerm)) {
+              newWords.push(`<span class="resaltado">${word}</span>`);
+            } else {
+              newWords.push(word);
+            }
+          });
+          header.innerHTML = newWords.join(' ');
+          count++;
+        } else {
+          const html = header.innerHTML.replace(/<span class="resaltado">|<\/span>/gi, '');
+          header.innerHTML = html;
+        }
+      }
+
+      if (count === 0) {
+        alert(`La palabra "${searchTerm}" no se encuentra en el documento.`);
+      } else {
+        const firstResult = document.querySelector('.resaltado');
+        firstResult.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      for (let i = 0; i < paragraphs.length; i++) {
+        const paragraph = paragraphs[i];
+        const html = paragraph.innerHTML.replace(/<span class="resaltado">|<\/span>/gi, '');
+        paragraph.innerHTML = html;
+      }
+
+      for (let i = 0; i < headers.length; i++) {
+        const header = headers[i];
+        const html = header.innerHTML.replace(/<span class="resaltado">|<\/span>/gi, '');
+        header.innerHTML = html;
+      }
+    }
+  }
 });
 
 /* ------ CAROUSEL ------ */
@@ -79,8 +157,23 @@ carouselDots.forEach((dot, index) => {
   });
 });
 
+/* ------- Up Section -------- */
+window.addEventListener('scroll', function() {
+  var upSections = document.querySelectorAll('.up-section'); // Selecionamos todas las secciones
+
+  for (var i = 0; i < upSections.length; i++) {
+    var upSectionPosition = upSections[i].getBoundingClientRect().top;
+    var screenPosition = window.innerHeight / 1.3;
+
+    if (upSectionPosition < screenPosition) {
+      upSections[i].style.opacity = "1";
+      upSections[i].style.transform = "translateY(0)";
+    }
+  }
+});
+
 //Formulario de Validación
-let formu = document.querySelector('form');
+let formu = document.getElementById('fomulario');
 
 formu.addEventListener('submit', function (evento) {
 
