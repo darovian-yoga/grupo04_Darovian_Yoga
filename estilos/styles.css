@@ -2,7 +2,7 @@
 :root {
   --bg-color: hsl(0, 0%, 98%);
   --text-color: hsl(0, 0%, 27%);
-  --primary-bg-color: hsl(273, 96%, 55%);
+  --primary-bg-color: rgb(96, 69, 109);
   --secondary-bg-color: hsl(29, 100%, 56%);
   --font: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
@@ -301,7 +301,7 @@ background-color: var(--secondary-bg-color);
 
 /*------ Three columns ------*/
 .titule{
-  display: flex;
+/* le saqué: "display: flex;" y se alineó al centro */
   align-items: center;
   text-align: center;
   margin: 10px;
@@ -344,10 +344,11 @@ display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
+
 /*/////Contacto////*/
 .sectionContacto {
   margin-top: 60%;
-  background-image: url(../images/buda.jpeg);
+  background-image: url(./images/buda.jpeg);
   background-repeat: repeat-x;
   width: 100%;
   padding: 20px;
@@ -418,7 +419,7 @@ display: flex;
 
 
 .botonEnviar {
-  background: #a812ff;
+  background: rgb(96, 69, 109);
   width: 90px;
   border-radius: 10px;
   border: none;
@@ -429,7 +430,7 @@ display: flex;
 }
 
 .botonEnviar:hover {
-  background: #6c4fe9ea;
+  background:  hsl(29, 100%, 56%);
   width: 90px;
   border-radius: 10px;
   border: none;
@@ -441,7 +442,7 @@ display: flex;
 
 /*//////FOOTER//////*/
 .footerPosible {
-  background: #9359f0;
+  background: rgb(96, 69, 109);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -449,10 +450,11 @@ display: flex;
 
 .footerposible-col {
   padding: 0.5%;
+  margin-top: 10px;
 }
 
 .footerPosible2 {
-  background: #b040fa;
+  background:  rgb(135, 106, 148);
   display: flex;
   align-items: center;
   justify-content: center;

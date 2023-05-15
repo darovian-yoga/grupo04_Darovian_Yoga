@@ -1,37 +1,19 @@
-body {
-    text-align: center;
-}
-
-h1{
+.precontenedorabout {
     color: hsl(0, 0%, 27%);
-    font-family: 'Trebuchet MS', Arial, Helvetica;
     text-align: center;
-    
+    font-size: medium;
+    margin-top: 50px;
 }
 
-article{
-    color: hsl(0, 0%, 27%);
-    font-family: 'Trebuchet MS', Arial, Helvetica;
-    text-align: center;
-}
-
-p{
-    color: hsl(0, 0%, 27%);
-    font-family: 'Trebuchet MS', Arial, Helvetica;
-    text-align: center;
-    font-size: 18px;
-    line-height: 30px;
-}
-
-.contenedor{
+.contenedorabout {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 700 px ;
+    height: 700px;
 }
-.contenedor figure{
-   position:relative;
+.contenedorabout figure{
+   position: relative;
     height: 500px;
     cursor: pointer;
     width: 800px;
@@ -39,13 +21,15 @@ p{
     border-radius: 6px;
     box-shadow: 0px 15px 25px rgba(0,0,0,0.50);
 }
-.contenedor figure img{
+
+.contenedorabout figure img{
     width: 100%;
     height: 100%;
     transition: all 400ms ease-out;
     will-change: transform;
 }
-.contenedor figure .capa{
+
+.contenedorabout figure .capa{
     position: absolute;
     top: 0;
     width: 100%;
@@ -56,26 +40,31 @@ p{
     visibility: hidden;
    text-align: center;
 }
-.contenedor figure:hover > .capa {
+
+.contenedorabout figure:hover > .capa {
     opacity: 1;
     visibility: visible;
 }
-.contenedor figure:hover > .capa h2{
+
+.contenedorabout figure:hover > .capa h2{
     margin-top: 70px;
     margin-bottom: 15px;
    
 }
-.contenedor figure:hover > img{
+
+.contenedorabout figure:hover > img{
     transform: scale(1.3);
 }
-.contenedor figure .capa h3{
+
+.contenedorabout figure .capa h3{
     color: hsl(0, 0%, 27%);
     font-weight: 400;
     margin-bottom: 120px;
     transition: all 400ms ease-out;
      margin-top: 100px;
 }
-.contenedor figure .capa h2{
+
+.contenedorabout figure .capa h2{
     color:hsl(0, 0%, 27%);
     font-family: 'Trebuchet MS', Arial, Helvetica;
     text-align: center;
@@ -86,17 +75,14 @@ p{
     margin: auto;
 }
 
-.h4{
-    color:hsl(0, 0%, 27%);
+.capa {
+    color: hsl(0, 0%, 27%);
     font-family: 'Trebuchet MS', Arial, Helvetica;
     text-align: center;
+    font-size: 18px;
+    line-height: 30px;
+    margin: auto;
 }
-
-
-
-
-
-
 
 
 /*.wrap{
