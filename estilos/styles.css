@@ -416,6 +416,7 @@ display: flex;
   background: none;
 }
 
+
 .botonEnviar {
   background: #a812ff;
   width: 90px;
@@ -435,6 +436,7 @@ display: flex;
   text-decoration: none;
   height: 50px;
   color: white;
+  
 }
 
 /*//////FOOTER//////*/
