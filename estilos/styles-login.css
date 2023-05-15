@@ -113,10 +113,7 @@ body {
 	margin-left: 5px;
 }
 
-
-
 /* signup.html */
-
 .fecha_nacimiento label {
 	margin-left: 35px;
 }
@@ -126,10 +123,7 @@ body {
 	margin-right: 30px;
 }
 
-
-
 /* recuperarcontraseña.html */
-
 .recuperar {
 	animation: fadeIn 3s ease-in-out;
 	display: flex;
