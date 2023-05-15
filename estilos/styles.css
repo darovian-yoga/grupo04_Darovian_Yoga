@@ -348,13 +348,13 @@ display: flex;
 .sectionContacto {
   margin-top: 60%;
   background-image: url(../images/buda.jpeg);
+  background-repeat: repeat-x;
   width: 100%;
   padding: 20px;
 }
 
 .contacto {
-  background-color: rgba(242, 242, 242, 0.5);
-  color: grey;
+  color: rgb(68, 68, 68);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -370,7 +370,6 @@ display: flex;
   align-items: center;
   justify-content: left;
   margin-right: 100px;
-  opacity: 0.8;
 }
 
 .fa-whatsapp,
@@ -406,7 +405,6 @@ display: flex;
   margin-right: 20px;
   font-size: 18px;
   margin-left: 50px;
-  opacity: 0.5;
 }
 
 .form-control {
@@ -415,33 +413,33 @@ display: flex;
   border-bottom: 1px solid black;
   padding: 10px 0;
   margin: 10px 0;
-  background: rgb(207, 130, 243, 0.0);
+  background: none;
 }
 
 .botonEnviar {
-  background: #c812ff;
+  background: #a812ff;
   width: 90px;
   border-radius: 10px;
   border: none;
   text-decoration: none;
-  height: 40px;
-  color: rgb(17, 1, 1);
+  height: 50px;
+  color: white;
   font-size: 20px;
 }
 
 .botonEnviar:hover {
-  background: #f262f7ea;
+  background: #6c4fe9ea;
   width: 90px;
   border-radius: 10px;
   border: none;
   text-decoration: none;
-  height: 40px;
+  height: 50px;
   color: white;
 }
 
 /*//////FOOTER//////*/
 .footerPosible {
-  background: #DCB0EB;
+  background: #9359f0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -452,7 +450,7 @@ display: flex;
 }
 
 .footerPosible2 {
-  background: #BAB5EF;
+  background: #b040fa;
   display: flex;
   align-items: center;
   justify-content: center;
