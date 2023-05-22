@@ -3,10 +3,10 @@
 
 @keyframes fadeIn {
 	from {
-	  opacity: 0;
+	opacity: 0;
 	}
 	to {
-	  opacity: 3;
+	opacity: 3;
 	}
 }
 
@@ -23,26 +23,21 @@ body {
 .milogo {
 	animation: fadeIn 3s ease-in-out;
 	display: flex;
-	align-items: center;
+	margin-top: 5%;
 }
 
 .micajita {
 	animation: fadeIn 3s ease-in-out;
 	display: flex;
-	width: 400px;
-	height: 500px;
-	align-items: center;
+	width: 410px;
+	height: 530px;
 	text-align: center;
-	justify-content: center;
-	flex-direction: column;
 	border: 1px solid #ddd;
-	border-radius: 5px;
-	padding: 30px;
+	border-radius: 2%;
+	padding: 28px;
 	background-color: rgba(242, 242, 242, 0.5);
 	box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
-	margin-bottom: 20px;
-	margin-top: 10px;
-	margin: 10px 0;
+	margin-bottom: 3%;
 }
 
 .correoemail label {
@@ -69,8 +64,7 @@ body {
 }
 
 .iniciosesion:hover input[type="submit"] {
-	width: 120px;
-	padding: 5px 15px;
+	width: 90px;
 	border-radius: 10px;
 	color: #fff;
 	background-color: #9f89b1;
@@ -91,7 +85,7 @@ body {
 	background: linear-gradient(to right, rgb(96, 69, 109), #655383, #ac93c4);
 	box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
 	margin: auto;
-	margin-bottom: 10px;
+	margin-bottom: 1.5%;
 }	
 
 .btn:hover {
@@ -138,6 +132,7 @@ body {
 	padding: 30px;
 	background-color: rgba(242, 242, 242, 0.5);
 	box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+	margin-bottom: 5%;
 }
 
 .inputrecuperar {
