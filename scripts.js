@@ -195,3 +195,18 @@ formu.addEventListener('submit', function (evento) {
     }
     console.log(document.write(saludo));
 })
+
+
+//Recuperación de contraseña
+function validarEmail() {
+  var emailInput = document.getElementById('email');
+  var email = emailInput.value;
+
+  var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (email !== '' && email.match(emailRegex)) {
+      window.alert('Se ha enviado un email a su dirección de correo electrónico. Puede que demore unos segundos. No olvide revisar en su carpeta de "SPAM".');
+      window.location.href = 'index.html'; 
+  } else {
+      window.alert('Proporcione una dirección de correo electrónico válida.');
+  }
+}
