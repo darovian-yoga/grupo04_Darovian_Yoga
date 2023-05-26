@@ -183,8 +183,6 @@ formu.addEventListener('submit', function (evento) {
 
     let mail = document.getElementById('mailForm').value;
 
-    let telefon = document.getElementById('teleForm').value;
-
     let mensaje = document.getElementById('mensajeForm').value;
 
     let saludo = 'Hola' + '    ' + '     ' + nombre + '           ' + 'en 48hs hábiles tendrá una respuesta en el correo electrónico ingresado.';
